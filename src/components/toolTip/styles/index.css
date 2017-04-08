@@ -1,0 +1,119 @@
+:root {
+	--tooltip-light: #fff;
+	--tooltip-dark: #222;
+}
+
+.sw-tooltip-wrapper {
+	position: relative;
+}
+
+.sw-tooltip {
+	position: absolute;
+	z-index: 100;
+	padding: 5px;
+	min-width: 230px;
+	border-radius: 3px;
+	box-shadow: 0 0 45px 0 rgba(0,0,0,0.2);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .4s, visibility .4s;
+}
+
+.sw-tooltip-wrapper:hover .sw-tooltip {
+	opacity: 1;
+	visibility: visible;
+}
+
+.sw-tooltip._light {
+	color: var(--tooltip-dark);
+	background-color: var(--tooltip-light);
+}
+
+.sw-tooltip._dark {
+	color: var(--tooltip-light);
+	background-color: var(--tooltip-dark);
+}
+
+.sw-tooltip._top {
+	bottom: 100%;
+	left: 50%;
+	margin-bottom: 8px;
+	transform: translateX(-50%);
+}
+
+.sw-tooltip._right {
+	top: 50%;
+	left: 100%;
+	margin-left: 8px;
+	transform: translateY(-50%);
+}
+
+.sw-tooltip._bottom {
+	top: 100%;
+	left: 50%;
+	margin-top: 8px;
+	transform: translateX(-50%);
+}
+
+.sw-tooltip._left {
+	top: 50%;
+	right: 100%;
+	margin-right: 8px;
+	transform: translateY(-50%);
+}
+
+.sw-tooltip:after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+.sw-tooltip._light:after {
+	color: var(--tooltip-light);
+}
+
+.sw-tooltip._dark:after {
+	color: var(--tooltip-dark);
+}
+
+.sw-tooltip._top:after {
+	top: 100%;
+	left: 50%;
+	margin-left: -8px;
+	border-top: 8px solid;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 0;
+}
+
+.sw-tooltip._right:after {
+	top: 50%;
+	right: 100%;
+	margin-top: -8px;
+	border-top: 8px solid transparent;
+	border-left: 0;
+	border-right: 8px solid;
+	border-bottom: 8px solid transparent;
+}
+
+.sw-tooltip._bottom:after {
+	bottom: 100%;
+	left: 50%;
+	margin-left: -8px;
+	border-top: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid;
+}
+
+.sw-tooltip._left:after {
+	top: 50%;
+	left: 100%;
+	margin-top: -8px;
+	border-top: 8px solid transparent;
+	border-left: 8px solid;
+	border-right: 0;
+	border-bottom: 8px solid transparent;
+}

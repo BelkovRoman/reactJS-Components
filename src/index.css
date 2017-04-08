@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,cyrillic-ext');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+  font-size: 14px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (min-width: 1201px) {
+  body {
+    width: 1230px;
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    width: 1170px;
+  }
+}
+
+@media (max-width: 992px) {
+  body {
+    width: 970px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 750px;
+  }
+}
+
+.wrap-100 {
+  margin: 20px 0;
+}
+
+.wrap-25 {
+  margin: 0 auto;
+  width: 25%;
+}
+
+.wrap-25-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  margin: 0 auto;
+}
+
+.sw-notificationPage-button {
+  margin-top: 80px;
+}

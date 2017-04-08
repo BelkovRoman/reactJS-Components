@@ -1,0 +1,24 @@
+{
+  "name": "sw-ui",
+  "main": "./index.js",
+  "version": "0.8.3",
+  "private": true,
+  "devDependencies": {
+    "enzyme": "^2.4.1",
+    "react-addons-test-utils": "^15.3.2",
+    "react-scripts": "0.6.1"
+  },
+  "dependencies": {
+    "js-marker-clusterer": "^1.0.0",
+    "moment": "^2.15.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-router": "^2.8.1",
+    "react-timepicker": "^1.1.5"
+  },
+  "scripts": {
+    "start": "node ./node_modules/react-scripts/bin/react-scripts start",
+    "build": "node ./node_modules/react-scripts/bin/react-scripts build",
+    "test": "node ./node_modules/react-scripts/bin/react-scripts test --env=jsdom"
+  }
+}

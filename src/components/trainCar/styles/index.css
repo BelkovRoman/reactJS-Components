@@ -1,0 +1,130 @@
+:root {
+	--sw-car-white: #ffF;
+	--sw-car-red: #ff0000;
+	--sw-car-gray: #5e6673;
+	--sw-car-light: #dadde0;
+}
+
+.sw-car {
+	display: flex;
+	justify-content: center;
+}
+
+.sw-car__inner {
+	position: relative;
+}
+
+.sw-car_coupe {
+	width: 907px;
+	height: 126px;
+	background-image: url(../styles/coupe-train.png);
+	background-repeat: no-repeat;
+}
+
+.sw-car_lux {
+    width: 907px;
+    height: 126px;
+    background-image: url(../styles/lux-train.png);
+    background-repeat: no-repeat;
+}
+
+.sw-car_platC {
+    width: 908px;
+    height: 126px;
+    background-image: url(../styles/platckart-train.png);
+    background-repeat: no-repeat;
+}
+
+.sw-car_vip {
+    width: 908px;
+    height: 126px;
+    background-image: url(../styles/vip-train.png);
+    background-repeat: no-repeat;
+}
+
+.sw-car__number {
+	position: absolute;
+    top: 53px;
+    left: 13px;
+    font-size: 1.1rem;
+	color: var(--sw-car-gray);
+}
+
+.sw-place {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	position: absolute;
+	color: var(--sw-car-gray);
+}
+
+.sw-place._busy {
+	color: var(--sw-car-light);
+}
+
+.sw-place__inner {
+	position: relative;
+}
+
+.sw-place__tooltip {
+	position: absolute;
+	opacity: 0;
+	z-index: 9999;
+	visibility: hidden;
+	padding: 5px 10px;
+	color: var(--sw-car-white);
+	background-color: var(--sw-car-red);
+}
+
+.sw-place__tooltip._busy {
+	color: var(--sw-car-gray);
+	background-color: var(--sw-car-light);
+}
+
+.sw-place__tooltip._coupTop {
+	transform: translate(-57%, -154%);
+}
+
+.sw-place__tooltip._coupBottom {
+	transform: translate(-57%, 55%);
+}
+
+.sw-place__tooltip._luxFree {
+    transform: translate(-57%, 132%);
+}
+
+.sw-place__tooltip._vipFree {
+    transform: translate(-57%, 120%);
+}
+
+.sw-place__tooltip._platCTop {
+    transform: translate(-57%, -155%);
+}
+
+.sw-place__tooltip._platCBottom {
+    transform: translate(-57%, 50%);
+}
+
+.sw-place__tooltip._platCSideTop {
+	transform: translate(-62%, -154%);
+}
+
+.sw-place__tooltip._platCSideBottom {
+	transform: translate(-62%, 50%);
+}
+
+.sw-place:hover{
+	color: var(--sw-car-white);
+	background-color: var(--sw-car-red);
+}
+
+.sw-place._busy:hover{
+	color: var(--sw-car-gray);
+	background-color: var(--sw-car-light);
+}
+
+.sw-place:hover .sw-place__tooltip{
+	opacity: 1;
+	visibility: visible;
+}
